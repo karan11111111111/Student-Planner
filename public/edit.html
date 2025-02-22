@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - Student Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+        }
+        .edit-profile-container {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 15px;
+            width: 420px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .edit-profile-container:hover {
+            transform: scale(1.02);
+        }
+        .edit-profile-container h2 {
+            color: #38bdf8;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #b0c4de;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            background: #334155;
+            color: #ffffff;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .form-group input:focus {
+            outline: none;
+            background: #475569;
+        }
+        .profile-pic {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile-pic img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 12px;
+            border: 3px solid #38bdf8;
+            transition: transform 0.3s;
+        }
+        .profile-pic img:hover {
+            transform: scale(1.1);
+        }
+        .profile-pic input {
+            width: auto;
+            padding: 5px;
+            background: #334155;
+            border-radius: 5px;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .btn-save {
+            background: #38bdf8;
+            color: #ffffff;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.2s;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn-save:hover {
+            background: #2563eb;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="edit-profile-container">
+        <h2>Edit Profile</h2>
+        <form>
+            <div class="profile-pic">
+                <img id="profilePreview" src="assets/img/default.png" alt="Profile Picture">
+                <input type="file" accept="image/*" id="profilePicInput" onchange="previewProfilePic(event)">
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob">
+            </div>
+            <div class="form-group">
+                <label for="course">Course</label>
+                <input type="text" id="course" placeholder="Enter your course">
+            </div>
+            <div class="form-group">
+                <label for="semester">Semester</label>
+                <input type="text" id="semester" placeholder="Enter your semester">
+            </div>
+            <button type="submit" class="btn-save">Save Changes</button>
+        </form>
+    </div>
+    <script>
+        function previewProfilePic(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                document.getElementById('profilePreview').src = reader.result;
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+</body>
+</html>

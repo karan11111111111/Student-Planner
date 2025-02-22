@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Planner - Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .signup-container {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .signup-container h1 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+        .signup-container p {
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background: #334155;
+            color: #ffffff;
+        }
+        .form-group input:focus {
+            outline: none;
+            background: #475569;
+        }
+        .btn-signup {
+            background: #38bdf8;
+            color: #ffffff;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+            width: 100%;
+            font-size: 16px;
+        }
+        .btn-signup:hover {
+            background: #2563eb;
+        }
+        .login-link {
+            margin-top: 15px;
+        }
+        .login-link a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Create an Account</h1>
+        <p>Sign up to manage your assignments, exams, and reminders.</p>
+        
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" required>
+            </div>
+            <button type="submit" class="btn-signup">Sign Up</button>
+            <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+        </form>
+    </div>
+</body>
+</html>

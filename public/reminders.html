@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Planner - Reminders</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+ <style>body {
+    background-color: #0f172a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+.sidebar {
+    width: 250px;
+    background: #1e293b;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.sidebar h2 {
+    color: #38bdf8;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+}
+.sidebar ul li a.active, .sidebar ul li a:hover {
+    background: #334155;
+}
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.reminder-list {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+}
+.reminder-list h2 {
+    color: #38bdf8;
+    text-align: center;
+}
+.reminder-card {
+    background: #334155;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.reminder-card h3 {
+    margin: 0 0 10px;
+    color: #38bdf8;
+}
+.reminder-card p {
+    margin: 5px 0;
+}</style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Student Planner</h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="assignments.html">Assignments</a></li>
+            <li><a href="exams.html">Exams</a></li>
+            <li><a href="reminders.html" class="active">Reminders</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="Logout.html" onclick="logout()">Logout</a></li>
+        </ul>
+    </div>
+    
+    <div class="main-content">
+        <header>
+            <h1>Reminders</h1>
+            <div class="user-profile">
+                <span id="username">Karan Kumar</span>
+                <img src="assets/img/img1.png" alt="User Profile">
+            </div>
+        </header>
+        
+        <section class="reminder-list">
+            <h2>Upcoming Reminders</h2>
+            <div class="reminder-card">
+                <h3>Submit Assignment</h3>
+                <p>Date: March 5, 2025</p>
+                <p>Time: 11:59 PM</p>
+            </div>
+            <div class="reminder-card">
+                <h3>Exam Registration</h3>
+                <p>Date: March 8, 2025</p>
+                <p>Time: 5:00 PM</p>
+            </div>
+            <div class="reminder-card">
+                <h3>Group Study Session</h3>
+                <p>Date: March 12, 2025</p>
+                <p>Time: 3:00 PM - 5:00 PM</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
